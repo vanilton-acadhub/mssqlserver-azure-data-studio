@@ -6,7 +6,7 @@ que não envolvam tarefas e ambientes complexos. Logo, vou ser bem direto para q
 SQL Server e uma ferramenta de gerenciamento para trabalhar com o SGBD no Windows, Mac ou Linux.
 Tudo aqui foi pesquisado e desenvolvido seguindo as documentações.
 
-Para ter o Microsoft SQL Server em uma ambiente Windows, Mac ou Linux você precisa ter
+Para ter o Microsoft SQL Server em um ambiente Mac ou Linux você precisa ter
 o Docker instalado na sua máquina, acesse [https://docs.docker.com/install/](https://docs.docker.com/install/)
 para obter o Docker Community Edition (CE).
 
@@ -19,7 +19,7 @@ Se você deseja baixar a imagem do SQL Server de forma interativa, execute o scr
 
 ![printscreen-pullimage](/img/printscreen-pullimage.png)
 
-Depois de baixada a imagem execute o seguinte comando:
+Depois de baixada a imagem, execute o seguinte comando:
 
 + <YourStrong!Passw0rd>: substitua isto pela senha que deseja para o seu
 SGBD. **Atenção: Sua senha deve ter pelo menos 8 caracteres e conter entre letras maiusculas, letras minúsculas, dígitos de base decimal e símbolos.**
