@@ -3,7 +3,7 @@
 Através deste repo estou buscando fazer com que você tenha uma instalação rápida e fácil
 para estar utilizando o SQL Server e o Azure Data Studio para estudos de disciplinas de banco de dados,
 que não envolvam tarefas e ambientes complexos. Logo, vou ser bem direto para que você tenha um servidor
-SQL Server e uma ferramenta de gerenciamento para trabalhar com o SGBD no Windows, Mac ou Linux.
+SQL Server e uma ferramenta de gerenciamento para trabalhar com o SGBD no Mac ou Linux.
 Tudo aqui foi pesquisado e desenvolvido seguindo as documentações.
 
 Para ter o Microsoft SQL Server em um ambiente Mac ou Linux você precisa ter
@@ -18,6 +18,14 @@ Se você deseja baixar a imagem do SQL Server de forma interativa, execute o scr
 ```
 
 ![printscreen-pullimage](/img/printscreen-pullimage.png)
+
+Caso queira baixar diretamente a imagem, utilize o seguinte comando:
+
+```bash
+~ sudo docker pull mcr.microsoft.com/mssql/server:<ATagQueDesejar>
+```
+
+Para obter uma lista de todas as tags disponível para o Microsoft SQL Server, clique [aqui](https://hub.docker.com/_/microsoft-mssql-server).
 
 Depois de baixada a imagem, execute o seguinte comando:
 
@@ -35,7 +43,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
 Fique à vontade para mudar o valor da flag `--name`.
 
 Pronto. Você já tem o SQL Server executando na sua máquina. Com o comando `docker ps` você pode
-observar o contêiner de pé. Vamos nos coneectar nele. Utilize o seguinte comando:
+observar o contêiner de pé. Vamos nos conectar nele. Utilize o seguinte comando:
 
 ```bash
 ~ sudo docker exec -it sqlserver_container "bash"
@@ -74,7 +82,7 @@ Agora clique em `Connect` e aparecerá uma tela como esta:
 
 ![printscreen-conectou](/img/printscreen-conectou.png)
 
-Como pode observar, o banco de dados criado na linha de comando está aparecendo: 
+Como pode observar, o banco de dados criado na linha de comando está aparecendo:
 
 ![printscreen-azuredatastudio-interface](/img/printscreen-azuredatastudio-interface.png)
 
@@ -106,7 +114,8 @@ Os bancos de dados criados serão recuperados :), fique tranquilo.
 
 E para remover o contêiner utilize o seguinte comando:
 
-**Atenção: se remover o contêiner, você precisará refazer todo o processo de configuração do começo.**
+**Atenção: se remover o contêiner, você precisará refazer todo o processo de configuração do começo e
+seus bancos de dados serão perdidos.**
 
 ```bash
 ~ sudo docker rm -v <ONomeDoSeuContainer>
