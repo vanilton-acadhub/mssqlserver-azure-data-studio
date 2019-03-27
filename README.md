@@ -25,13 +25,13 @@ Caso queira baixar diretamente a imagem, utilize o seguinte comando:
 ~ sudo docker pull mcr.microsoft.com/mssql/server:<ATagQueDesejar>
 ```
 
-Para obter uma lista de todas as tags disponível para o Microsoft SQL Server, clique [aqui](https://hub.docker.com/_/microsoft-mssql-server).
+Para obter uma lista de todas as tags disponíveis para o Microsoft SQL Server, clique [aqui](https://hub.docker.com/_/microsoft-mssql-server).
 
 Depois de baixada a imagem, execute o seguinte comando:
 
-+ <YourStrong!Passw0rd>: substitua isto pela senha que deseja para o seu
+><YourStrong!Passw0rd>: substitua isto pela senha que deseja para o seu
 SGBD. **Atenção: Sua senha deve ter pelo menos 8 caracteres e conter entre letras maiusculas, letras minúsculas, dígitos de base decimal e símbolos.**
-+ Lembrando que você deve utilizar a tag correspondente baixada, no exemplo abaixo
+Lembrando que você deve utilizar a tag correspondente baixada, no exemplo abaixo
 consideramos que você baixou a imagem do SQL Server com a tag *2017-latest*.
 
 ```bash
@@ -114,7 +114,7 @@ Os bancos de dados criados serão recuperados :), fique tranquilo.
 
 E para remover o contêiner utilize o seguinte comando:
 
-**Atenção: se remover o contêiner, você precisará refazer todo o processo de configuração do começo e
+>**Atenção: se remover o contêiner, você precisará refazer todo o processo de configuração do começo e
 seus bancos de dados serão perdidos.**
 
 ```bash
