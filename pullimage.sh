@@ -1,6 +1,10 @@
 #!/bin/bash
 
 #
+#   autor: Vanilton Alves dos Santos Filho - github.com/vanilton-acadhub - 2019
+#
+
+#
 # Inicialmente este script disponibiliza 3 tags
 # Se você deseja encontrar outras acesse:
 # https://hub.docker.com/_/microsoft-mssql-server
