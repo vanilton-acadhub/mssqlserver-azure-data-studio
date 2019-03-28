@@ -35,12 +35,16 @@ Lembrando que você deve utilizar a tag correspondente baixada, no exemplo abaix
 consideramos que você baixou a imagem do SQL Server com a tag *2017-latest*.
 
 ```bash
-sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+~ sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
    -p 1433:1433 --name sqlserver_container \
    -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
-Fique à vontade para mudar o valor da flag `--name`.
+Fique à vontade para mudar o valor da flag `--name`. Você também pode mudar o encaminhamento
+da porta do host para o contêiner. Temos `<HOST>:<CONTEINER>`, você pode utilizar qualquer outra porta
+válida como -p `8000:1433`. Ou também você pode deixar a responsabilidade por alocar as portas para
+o Docker com a flag `-P`. Para visualizar que porta foi alocada para o seu contêiner, utilize o
+comando: `docker port <NomeDoContainer>`.  
 
 Pronto. Você já tem o SQL Server executando na sua máquina. Com o comando `docker ps` você pode
 observar o contêiner de pé. Vamos nos conectar nele. Utilize o seguinte comando:
@@ -72,7 +76,8 @@ Ao abrir ele você encontrará uma área como esta:
 
 Complete os respectivos campos com os seguintes valores:
 
-+ Server: **localhost**.
++ Server: **localhost**. *Se você utilizou outra porta diferente de 1433 para o host, coloque uma virgula
+depois de localhost e o número da porta alocada. Por exemplo: `localhost,8000`*
 + User name: **SA**
 + Password: **ASenhaQueVocecriou19@qui**
 
