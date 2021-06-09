@@ -1,7 +1,7 @@
 # Microsoft SQL Server Dockerized e Azure Data Studio
 
 Através deste repo estou buscando fazer com que você tenha uma instalação rápida e fácil
-para estar utilizando o SQL Server e o Azure Data Studio para estudos de disciplinas de banco de dados,
+para estar utilizando o SQL Server e o Azure Data Studio para estudos de disciplinas de banco de dados e desenvolvimento web,
 que não envolvam tarefas e ambientes complexos. Logo, vou ser bem direto para que você tenha um servidor
 SQL Server e uma ferramenta de gerenciamento para trabalhar com o SGBD no Mac ou Linux.
 Tudo aqui foi pesquisado e desenvolvido seguindo as documentações.
@@ -11,10 +11,10 @@ o Docker instalado na sua máquina, acesse [https://docs.docker.com/install/](ht
 para obter o Docker Community Edition (CE).
 
 Se você deseja baixar a imagem do SQL Server de forma interativa, execute o script
-`pullimage.sh` (clone ou baixe este repo em sua máquina e esteja dentro do diretório):
+`setup.sh` (clone ou baixe este repo em sua máquina e esteja dentro do diretório):
 
 ```bash
-~ bash pullimage.sh
+~ bash setup.sh
 ```
 
 ![printscreen-pullimage](/img/printscreen-pullimage.png)
